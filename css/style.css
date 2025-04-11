@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 15px solid green;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.score {
+  position: absolute;
+  right: 50%;
+  width: 50px;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.cloud {
+  width: 500px;
+  top: 150px;
+  position: absolute;
+  /* animation: CloudAnimation 10s infinite linear; */
+}
+
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  /* animation: PipeAnimation 1.5s infinite linear; */
+}
+
+.start {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+}
+.start h2 {
+  font-weight: bold;
+}
+
+.reset {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(101, 97, 97, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.reset button,
+.start button {
+  height: 30px;
+  width: 150px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.reset button:hover {
+  background-color: #ccc;
+}
+
+@keyframes PipeAnimation {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -2%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes CloudAnimation {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -5%;
+  }
+}
